@@ -4,12 +4,13 @@ import TheatreSelect from './TheatreSelect';
 import MovieList from '../components/MovieList/MovieList'
 
 class App extends React.Component{
-    state = {showtimes:{},movie:''};
+    state = {showtimes:[],movie:''};
     onSearchsubmit=async(term)=>{
         this.setState({movie:term})
     };
     onMovieSelect = async(term)=>{
         this.setState({showtimes: term})
+        console.log(this.state.showtimes)
     }
     render(){
     return(<div className = "ui two column centered grid" style={{marginTop: '30px', alignContent:'inherit' }}>
@@ -20,7 +21,7 @@ class App extends React.Component{
                 </div>
           
            
-                <MovieList movieSearch = {this.state.movie}/>
+                <MovieList movieSearch = {this.state.movie} time = {this.state.showtimes}/>
                 </div>
            
             </div>);

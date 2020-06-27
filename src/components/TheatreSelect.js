@@ -1,6 +1,5 @@
 import React from 'react';
 import data from '../assets/data/theater_showtimes';
-import TheatreDisplay from './TheatreDisplay';
 
 class TheatreSelect extends React.Component{
     state = {time:{}}
@@ -15,7 +14,10 @@ class TheatreSelect extends React.Component{
                     data.map((data,key) =>{
                         return(
                             <div className="ui basic buttons">
-                               <TheatreDisplay name = {data.name} onSelect = {this.state.time}/>
+                               <div className = "ui basic buttons">
+                <div className ="ui button" onSelect = {(e)=>this.theatreselect(e)}>{data.name}</div>
+            
+            </div>
                             </div>
 
 
