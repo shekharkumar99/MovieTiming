@@ -12,13 +12,12 @@ class MovieList extends React.Component{
         }).map(data=>{
         return(
             
-            <div className ="container">
-                <div className=" ui middle aligned divided list">
+           
+               
                         <MovieCard title ={data.title} rating = {data.rating} poster = {data.poster} />
-                        </div>
 
 
-            </div>
+            
         
         );
                         
@@ -28,8 +27,8 @@ class MovieList extends React.Component{
         <div className ="container">
                 <div className=" ui middle aligned divided list">
                         {items}
-                        </div>
-                        </div>
+                </div>
+        </div>
         )
 
 }

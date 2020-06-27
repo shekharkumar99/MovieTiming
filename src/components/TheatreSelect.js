@@ -3,6 +3,11 @@ import data from '../assets/data/theater_showtimes';
 import TheatreDisplay from './TheatreDisplay';
 
 class TheatreSelect extends React.Component{
+    state = {time:{}}
+    onSelect=async(term)=>{
+        this.setState({time:term})
+        this.props.onSelect=term;
+    }
     render(){
         return(
             <div>
@@ -10,7 +15,7 @@ class TheatreSelect extends React.Component{
                     data.map((data,key) =>{
                         return(
                             <div className="ui basic buttons">
-                               <TheatreDisplay name = {data.name}/>
+                               <TheatreDisplay name = {data.name} onSelect = {this.state.time}/>
                             </div>
 
 

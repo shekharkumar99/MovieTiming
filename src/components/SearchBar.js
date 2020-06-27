@@ -9,10 +9,12 @@ class SearchBar extends React.Component{
       }
     render(){
         return(
-            <div>
-                <div className ="ui search">
-        <input type = 'text' value = {this.state.term} onChange={(e)=>this.searchSpace(e)} className = "prompt" />
-
+            <div className=" ui container" style ={{width: '100px'}}>
+                <div className ="ui fluid category search" >
+                <div class="ui icon input">
+        <input type = 'text' placeholder="Search Movies" value = {this.state.term} onChange={(e)=>this.searchSpace(e)} className = "prompt" />
+        <i class="search icon"></i>
+        </div>
         </div>
         </div>
         );

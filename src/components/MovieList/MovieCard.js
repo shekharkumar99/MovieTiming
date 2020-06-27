@@ -3,7 +3,7 @@ import'./MovieCard.css';
 class MovieCard extends React.Component{
     render(){
         return(
-            <div className = "ui cards">
+            <div className = "ui centered card">
                 <div className = "cards">
                     <div className="image">
                         <img src ={this.props.poster}/>
@@ -15,6 +15,7 @@ class MovieCard extends React.Component{
                         </a>
                     </div>
                     <div className="meta">
+                        <label>Rating:</label>
                     <a>{this.props.rating}</a>
                     </div>
                 </div>
