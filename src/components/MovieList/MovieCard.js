@@ -1,4 +1,5 @@
 import React from 'react';
+import'./MovieCard.css';
 class MovieCard extends React.Component{
     render(){
         return(
@@ -8,10 +9,13 @@ class MovieCard extends React.Component{
                         <img src ={this.props.poster}/>
                     </div>
                     <div className ="content">
-                        <div className = "header">
+                        <a className = "header">
                             {this.props.title}
 
-                        </div>
+                        </a>
+                    </div>
+                    <div className="meta">
+                    <a>{this.props.rating}</a>
                     </div>
                 </div>
 
