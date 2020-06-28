@@ -5,12 +5,14 @@ import MovieList from '../components/MovieList/MovieList'
 
 class App extends React.Component{
 
+    //The state changes according to the search and theatre selection to display movie timings
+
     state = {showtimes:[],movie:''};
 
     onSearchsubmit=async(term)=>{
         this.setState({movie:term})
     };
-    
+
     onMovieSelect = async(term)=>{
         this.setState({showtimes: term})
         console.log(this.state.showtimes)

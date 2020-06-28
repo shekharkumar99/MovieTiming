@@ -1,7 +1,9 @@
 import React from 'react';
 import movieData from '../../assets/data/movie_metadata.json'
 import MovieCard from './MovieCard'
+
 class MovieList extends React.Component{
+
     render(){
         const items = movieData.filter((data)=>{
             if(this.props.movieSearch == '')

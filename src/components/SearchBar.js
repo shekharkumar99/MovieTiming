@@ -1,12 +1,15 @@
 import React from 'react';
 
 class SearchBar extends React.Component{
+
     state ={term:''};
+
     searchSpace=(event)=>{
         let keyword = event.target.value;
         this.setState({term:keyword});
         this.props.onChange(this.state.term );
       }
+      
     render(){
         return(
             <div className=" ui container" style ={{width: '100px'}}>
